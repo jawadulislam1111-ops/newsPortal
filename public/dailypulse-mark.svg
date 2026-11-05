@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <title>DailyPulse</title>
+  <rect width="128" height="128" rx="20" fill="#171717"/>
+  <path d="M21 27h29c26 0 39 15 39 37 0 23-15 37-39 37H21v-9h7V36h-7zm25 10v54h5c13 0 20-10 20-27 0-18-7-27-20-27z" fill="#fff"/>
+  <circle cx="100" cy="89" r="11" fill="#dc2626"/>
+</svg>

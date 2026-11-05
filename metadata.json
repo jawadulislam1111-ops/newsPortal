@@ -1,0 +1,6 @@
+{
+  "name": "DailyPulse - Online News Portal",
+  "description": "Modern, responsive editorial news portal covering national, international, technology, business, sports, entertainment, and opinion news.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
