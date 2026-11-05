@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AdSize } from '../types';
 import { X, ExternalLink } from 'lucide-react';
+import { SandboxedAdFrame, programmaticAdDocument } from './SandboxedAd';
 
 interface AdSlotProps {
   size: AdSize;
@@ -53,17 +54,12 @@ export const AdSlot: React.FC<AdSlotProps> = ({
           <div className="text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-1 font-mono">
             {label} · 300×250
           </div>
-          <div className="w-[300px] max-w-full h-[250px] border border-dashed border-stone-300 dark:border-stone-700 bg-stone-100/70 dark:bg-stone-900/60 rounded flex flex-col items-center justify-center p-4 text-center transition-colors">
-            <div className="w-10 h-10 rounded-full bg-stone-200 dark:bg-stone-800 flex items-center justify-center text-stone-500 mb-3">
-              <ExternalLink className="w-5 h-5" />
-            </div>
-            <span className="text-xs font-semibold text-stone-700 dark:text-stone-300 uppercase tracking-wide">
-              Medium Rectangle (MPU)
-            </span>
-            <span className="text-[11px] text-stone-500 dark:text-stone-400 mt-1 max-w-[220px]">
-              Targeted contextual brand advertisement slot
-            </span>
-          </div>
+          <SandboxedAdFrame
+            title={label}
+            srcDoc={programmaticAdDocument('ecd410b2e746db2798f8706d706dc62b', 300, 250)}
+            width={300}
+            height={250}
+          />
         </aside>
       );
 
@@ -77,25 +73,15 @@ export const AdSlot: React.FC<AdSlotProps> = ({
           <div className="text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-1 font-mono">
             {label} · 300×600
           </div>
-          <div className="w-[300px] max-w-full h-[600px] border border-dashed border-stone-300 dark:border-stone-700 bg-stone-100/70 dark:bg-stone-900/60 rounded flex flex-col items-center justify-between p-6 text-center transition-colors">
-            <div className="text-[11px] text-stone-500 tracking-wider uppercase font-mono">
-              Premium Skyscraper
-            </div>
-            <div className="flex flex-col items-center space-y-2">
-              <div className="w-12 h-12 rounded-full bg-stone-200 dark:bg-stone-800 flex items-center justify-center text-stone-600 dark:text-stone-300">
-                <ExternalLink className="w-6 h-6" />
-              </div>
-              <p className="text-sm font-semibold text-stone-800 dark:text-stone-200">
-                High-Impact Brand Storytelling
-              </p>
-              <p className="text-xs text-stone-500 dark:text-stone-400 max-w-[200px]">
-                Fixed vertical ad canvas sticky beside editorial content
-              </p>
-            </div>
-            <span className="text-[10px] text-stone-500 dark:text-stone-400">
-              Interactive Display Unit
-            </span>
+          <div className="text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-1 font-mono">
+            {label} · 160×300
           </div>
+          <SandboxedAdFrame
+            title={label}
+            srcDoc={programmaticAdDocument('f6ea50a5f32fe8c9cd4796b9a7edbe89', 160, 300)}
+            width={160}
+            height={300}
+          />
         </aside>
       );
 
@@ -141,24 +127,13 @@ export const AdSlot: React.FC<AdSlotProps> = ({
               </button>
             )}
           </div>
-          <div className="w-[320px] max-w-full h-[50px] flex items-center justify-between px-3 py-1 bg-stone-900 rounded mb-1 text-xs">
-            <div className="flex items-center gap-2 overflow-hidden">
-              <div className="w-7 h-7 rounded bg-red-600 shrink-0 flex items-center justify-center font-bold text-[10px] text-white">
-                AD
-              </div>
-              <div className="truncate">
-                <p className="font-medium text-stone-200 truncate text-[11px]">
-                  DailyPulse Evening Wrap
-                </p>
-                <p className="text-[10px] text-stone-400 truncate">
-                  A daily digest of global news
-                </p>
-              </div>
-            </div>
-            <a href="#newsletter-section" aria-label="Sign up for the DailyPulse Evening Wrap" className="px-2.5 py-1 text-[11px] font-semibold bg-white text-stone-900 rounded shrink-0 hover:bg-stone-200 transition-colors ml-2">
-              Sign up
-            </a>
-          </div>
+          <SandboxedAdFrame
+            title="Mobile banner advertisement"
+            srcDoc={programmaticAdDocument('635a84daca19430336b1b1e6558fe433', 320, 50)}
+            width={320}
+            height={50}
+            className="mb-1 rounded"
+          />
         </aside>
       );
 

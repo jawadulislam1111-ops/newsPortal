@@ -5,6 +5,7 @@ import { CategoryBlock } from '../components/CategoryBlock';
 import { Sidebar } from '../components/Sidebar';
 import { AdSlot } from '../components/AdSlot';
 import { ProgrammaticLeaderboard } from '../components/ProgrammaticLeaderboard';
+import { ProgrammaticAd, SandboxedAdFrame, scriptAdDocument } from '../components/SandboxedAd';
 import { NewsCard } from '../components/NewsCard';
 
 interface HomePageProps {
@@ -107,6 +108,33 @@ export const HomePage: React.FC<HomePageProps> = ({
               ))}
             </div>
           </section>
+
+          <ProgrammaticAd
+            label="Advertisement"
+            keyId="025c68e2b9d50c1aa7f881a9383ab226"
+            width={468}
+            height={60}
+          />
+
+          <aside
+            role="complementary"
+            aria-label="Advertisement"
+            className="my-6 flex flex-col items-center"
+          >
+            <div className="text-[10px] uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-1 font-mono">
+              Advertisement
+            </div>
+            <SandboxedAdFrame
+              title="Advertisement"
+              srcDoc={scriptAdDocument('https://bauval.org/21/713e05fd1de221162c74ebb89f2f6439', {
+                async: true,
+                dataCfasync: true,
+                containerId: 'container-713e05fd1de221162c74ebb89f2f6439',
+              })}
+              width={300}
+              height={250}
+            />
+          </aside>
 
           {/* In-feed ad banner between sections */}
           <AdSlot size="leaderboard" label="In-Feed Native Sponsor" className="my-4" />

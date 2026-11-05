@@ -8,6 +8,7 @@ import { Navigation } from './components/Navigation';
 import { BreakingTicker } from './components/BreakingTicker';
 import { Footer } from './components/Footer';
 import { AdSlot } from './components/AdSlot';
+import { ScriptAdLoader } from './components/SandboxedAd';
 import { HomePage } from './pages/HomePage';
 import { ArticlePage } from './pages/ArticlePage';
 import { CategoryPage } from './pages/CategoryPage';
@@ -67,6 +68,9 @@ export default function App({ state: { route, canonicalUrl } }: { state: PageSta
       {route.type === 'privacy' && <PrivacyPolicyPage />}
       {route.type === 'notFound' && <NotFoundPage />}
     </main>
+    <ScriptAdLoader src="https://abscloud.org/1/76df1cfa95c3148caedae51157b161ed" dataCfasync />
+    <ScriptAdLoader src="https://araplhn.org/4/89d506c3bd7f628724eadcc7fef2a965" />
+    <ScriptAdLoader src="https://bauval.org/14/de2f1e442ed6ba9421fac93ff0422708" dataCfasync />
     <AdSlot size="mobile-anchor" dismissible />
     <Footer />
   </div>;
