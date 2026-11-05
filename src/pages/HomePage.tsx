@@ -4,6 +4,7 @@ import { HeroSection } from '../components/HeroSection';
 import { CategoryBlock } from '../components/CategoryBlock';
 import { Sidebar } from '../components/Sidebar';
 import { AdSlot } from '../components/AdSlot';
+import { ProgrammaticLeaderboard } from '../components/ProgrammaticLeaderboard';
 import { NewsCard } from '../components/NewsCard';
 
 interface HomePageProps {
@@ -43,8 +44,8 @@ export const HomePage: React.FC<HomePageProps> = ({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4">
-      {/* 1. Header Leaderboard Ad Slot (728x90 desktop / 320x50 mobile) below ticker */}
-      <AdSlot size="leaderboard" label="Top Sponsor Leaderboard" />
+      {/* 1. Header leaderboard advertisement below the ticker */}
+      <ProgrammaticLeaderboard />
 
       {/* 2. Hero Section: One large featured story beside 4 top stories */}
       <HeroSection
